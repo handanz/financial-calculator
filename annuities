@@ -1,0 +1,36 @@
+#annuity, solving by decimals and formulas
+
+# puts "What is the amount of payment? (A)"
+# A = gets.chomp.to_f
+
+# puts "What is the number of terms in the series? (n)"
+# n = gets.chomp.to_f
+
+# puts "What is period interest rate? (r)"
+# r = gets.chomp.to_f
+
+
+# PV = A/(1+r)*(1-(1/(1+r))**n)/(1-(1/(1+r)))
+
+# puts PV
+
+# solve by decimals
+
+def annuity(a, n, r)
+  list = []
+  for i in 1..n do
+    list << a/(1+r)**i
+  end
+  list.sum
+end
+
+puts "What is the amount of payment? (A)"
+a = gets.chomp.to_f
+
+puts "What is the number of terms in the series? (n)"
+n = gets.chomp.to_f
+
+puts "What is period interest rate? (r)"
+r = gets.chomp.to_f
+
+puts annuity(a, n, r)
